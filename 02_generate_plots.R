@@ -1,6 +1,3 @@
-# Generate plots: MA plots, heatmap, and Venn diagrams
-
-library(DESeq2)
 library(pheatmap)
 library(ggplot2)
 library(ggvenn)
@@ -52,12 +49,12 @@ wt_60min_cols <- grep("WT_RIF_60min", colnames(significant_counts_log))
 
 # Create averaged data
 averaged_data <- data.frame(
-  "pstA1_Control" = rowMeans(significant_counts_log[, pstA1_ctrl_cols]),
-  "pstA1_RIF_30min" = rowMeans(significant_counts_log[, pstA1_30min_cols]),
-  "pstA1_RIF_60min" = rowMeans(significant_counts_log[, pstA1_60min_cols]),
-  "WT_Control" = rowMeans(significant_counts_log[, wt_ctrl_cols]),
-  "WT_RIF_30min" = rowMeans(significant_counts_log[, wt_30min_cols]),
-  "WT_RIF_60min" = rowMeans(significant_counts_log[, wt_[2;2R60min_cols])
+  pstA1_Control = rowMeans(significant_counts_log[, pstA1_ctrl_cols]),
+  pstA1_RIF_30min = rowMeans(significant_counts_log[, pstA1_30min_cols]),
+  pstA1_RIF_60min = rowMeans(significant_counts_log[, pstA1_60min_cols]),
+  WT_Control = rowMeans(significant_counts_log[, wt_ctrl_cols]),
+  WT_RIF_30min = rowMeans(significant_counts_log[, wt_30min_cols]),
+  WT_RIF_60min = rowMeans(significant_counts_log[, wt_60min_cols])
 )
 
 # Mean center the data
@@ -77,7 +74,7 @@ rownames(col_annotation_full) <- colnames(mean_centered_log2)
 
 annotation_colors <- list(Strain = strain_colors, Treatment = treatment_colors)
 
-pdf(file.path(output_dir, "figures", "heatmap_all_DEGs.pdf"), width[3;1R = 10, height = 12)
+pdf(file.path(output_dir, "figures", "heatmap_all_DEGs.pdf"), width = 10, height = 12)
 pheatmap(mean_centered_log2,
          cluster_rows = TRUE,
          cluster_cols = FALSE,
@@ -119,7 +116,7 @@ up_venn_rif <- list(WT = wt_rif$up, pstA1 = pstA1_rif$up)
 down_venn_rif <- list(WT = wt_rif$down, pstA1 = pstA1_rif$down)
 
 # Plot all 4 Venns
-pdf(file.path(output_dir, "figures", "venn_diagr[>41;2500;0c]10;rgb:dcaa/dcab/dcaa\]11;rgb:158e/193a/1e75\ams.pdf"), width = 10, height = 10)
+pdf(file.path(output_dir, "figures", "venn_diagrams.pdf"), width = 10, height = 10)
 
 print(ggvenn(up_venn_3way, fill_color = rep(NA, 3), stroke_size = 2, 
        set_name_size = 6, text_size = 6, show_percentage = FALSE) + 
