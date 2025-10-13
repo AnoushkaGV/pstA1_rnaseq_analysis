@@ -6,10 +6,6 @@ RNA-seq differential expression analysis for *Mycobacterium tuberculosis* pstA1 
 
 If you use this code or data, please cite:
 
-**Manuscript:**
-```
-[Your Author List]. (2025). [Your Paper Title]. mBio. DOI: [Your DOI]
-```
 
 **Data:**
 ```
@@ -47,14 +43,14 @@ mkdir data
 
 **All sequencing data and count matrices are available on GEO (Gene Expression Omnibus):**
 
-- **GEO Accession:** GSE[YOUR_ACCESSION_NUMBER]
-- **Link:** https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE[YOUR_ACCESSION_NUMBER]
+- **GEO Accession:** GSE[ACCESSION_NUMBER]
+- **Link:** https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE[ACCESSION_NUMBER]
 
 ### Required Files from GEO:
 
 Download the following files from GEO and place them in a `data/` directory:
 
-1. **cc_matrix.csv** - Raw count matrix (genes × samples)
+1. **count_matrix.csv** - Raw count matrix (genes × samples)
    - Format: First column = Gene IDs (Rv numbers), remaining columns = sample counts
    - Column names: `pstA1_ctrl_1`, `pstA1_ctrl_2`, `pstA1_ctrl_3`, `pstA1_RIF_30min_1`, etc.
 
@@ -73,7 +69,7 @@ After downloading from GEO, organize files as:
 ```
 pstA1/
 ├── data/
-│   ├── cc_matrix.csv
+│   ├── count_matrix.csv
 │   └── rv_dict.csv
 └── ...
 ```
@@ -136,7 +132,6 @@ Default thresholds (modify in `config.R`):
 MIT License
 
 ## Contact
-
 
 ## References
 
