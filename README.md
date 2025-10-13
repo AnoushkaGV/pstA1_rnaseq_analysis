@@ -5,11 +5,13 @@ RNA-seq differential expression analysis for *Mycobacterium tuberculosis* pstA1 
 ## Citation
 
 If you use this code or data, please cite:
-
+Biorxiv link
+## Authors
+G V Anoushka Chinmayi
 
 **Data:**
 ```
-Gene Expression Omnibus accession GSE[YOUR_ACCESSION_NUMBER]
+Gene Expression Omnibus accession GSE[ACCESSION_NUMBER]
 ```
 
 ## Requirements
@@ -36,7 +38,7 @@ cd pstA1
 mkdir data
 
 # 3. Download data files from GEO (see Data Availability section above)
-# Place cc_matrix.csv and rv_dict.csv in the data/ directory
+# Place count_matrix.csv and rv_dict.csv in the data/ directory
 ```
 
 ## Data Availability
