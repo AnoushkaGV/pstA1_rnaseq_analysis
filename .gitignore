@@ -1,0 +1,21 @@
+# R files
+.Rhistory
+.RData
+.Rproj.user
+*.Rproj
+
+# Data files (add your actual data to .gitignore)
+data/*.csv
+data/*.xlsx
+data/*.txt
+
+# Results (comment out if you want to include results)
+results/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*~
