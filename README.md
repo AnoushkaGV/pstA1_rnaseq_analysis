@@ -4,6 +4,18 @@ RNA-seq differential expression analysis for *Mycobacterium tuberculosis* pstA1 
 
 ## Citation
 
+If you use this code or data, please cite:
+
+**Manuscript:**
+```
+[Your Author List]. (2025). [Your Paper Title]. mBio. DOI: [Your DOI]
+```
+
+**Data:**
+```
+Gene Expression Omnibus accession GSE[YOUR_ACCESSION_NUMBER]
+```
+
 ## Requirements
 
 **R version:** >= 4.2.0
@@ -20,39 +32,50 @@ install.packages(c("pheatmap", "ggplot2", "tidyr", "dplyr", "ggvenn"))
 ## Installation
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/AnoushkaGV/pstA1.git
 cd pstA1
+
+# 2. Create data directory
+mkdir data
+
+# 3. Download data files from GEO (see Data Availability section above)
+# Place cc_matrix.csv and rv_dict.csv in the data/ directory
 ```
+
 ## Data Availability
 
-Raw sequencing data and processed count matrices are available at NCBI Gene Expression Omnibus (GEO):
-- **GEO Accession:**
-- **Link:**
+**All sequencing data and count matrices are available on GEO (Gene Expression Omnibus):**
 
-To run this analysis pipeline:
-1. Download count matrix and gene annotation files from GEO
-2. Place files in the `data/` directory as described below
+- **GEO Accession:** GSE[YOUR_ACCESSION_NUMBER]
+- **Link:** https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE[YOUR_ACCESSION_NUMBER]
 
-## Data Structure
+### Required Files from GEO:
 
-Place your input files in the `data/` directory:
+Download the following files from GEO and place them in a `data/` directory:
 
+1. **cc_matrix.csv** - Raw count matrix (genes × samples)
+   - Format: First column = Gene IDs (Rv numbers), remaining columns = sample counts
+   - Column names: `pstA1_ctrl_1`, `pstA1_ctrl_2`, `pstA1_ctrl_3`, `pstA1_RIF_30min_1`, etc.
+
+2. **rv_dict.csv** - Gene ID to gene name mapping
+   - Format: Two columns (Rv, Name)
+   - Example:
+   ```
+   Rv,Name
+   Rv0001,dnaA
+   Rv0002,dnaN
+   ```
+
+### Data Structure:
+
+After downloading from GEO, organize files as:
 ```
-data/
-├── cc_matrix.csv    # Raw count matrix (genes × samples)
-└── rv_dict.csv      # Gene ID to gene name mapping
-```
-
-**cc_matrix.csv format:**
-- First column: Gene IDs (Rv numbers)
-- Remaining columns: Sample counts
-- Column names: `pstA1_ctrl_1`, `pstA1_ctrl_2`, `pstA1_ctrl_3`, `pstA1_RIF_30min_1`, etc.
-
-**rv_dict.csv format:**
-```
-Rv,Name
-Rv0001,dnaA
-Rv0002,dnaN
+pstA1/
+├── data/
+│   ├── cc_matrix.csv
+│   └── rv_dict.csv
+└── ...
 ```
 
 ## Usage
@@ -114,8 +137,6 @@ MIT License
 
 ## Contact
 
-G V Anoushka Chinmayi 
-Johns Hopkins University
 
 ## References
 
