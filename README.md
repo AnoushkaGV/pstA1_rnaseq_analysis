@@ -23,6 +23,15 @@ install.packages(c("pheatmap", "ggplot2", "tidyr", "dplyr", "ggvenn"))
 git clone https://github.com/AnoushkaGV/pstA1.git
 cd pstA1
 ```
+## Data Availability
+
+Raw sequencing data and processed count matrices are available at NCBI Gene Expression Omnibus (GEO):
+- **GEO Accession:**
+- **Link:**
+
+To run this analysis pipeline:
+1. Download count matrix and gene annotation files from GEO
+2. Place files in the `data/` directory as described below
 
 ## Data Structure
 
