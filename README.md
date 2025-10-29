@@ -133,5 +133,3 @@ Default thresholds (modify in `config.R`):
 
 MIT License
 
-## Contact
-
