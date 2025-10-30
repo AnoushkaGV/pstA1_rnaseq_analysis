@@ -33,13 +33,6 @@ mkdir data
 # Place count_matrix.csv and rv_dict.csv in the data/ directory
 ```
 
-## Data Availability
-
-**All sequencing data and count matrices are available on GEO (Gene Expression Omnibus):**
-
-- **GEO Accession:**
-- **Link:** 
-
 ### Required Files from GEO:
 
 Download the following files from GEO and place them in a `data/` directory:
