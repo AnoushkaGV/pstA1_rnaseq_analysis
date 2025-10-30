@@ -2,17 +2,9 @@
 
 RNA-seq differential expression analysis for *Mycobacterium tuberculosis* pstA1 mutant response to rifampicin treatment.
 
-## Citation
-
-If you use this code or data, please cite:
 
 ## Authors
 G V Anoushka Chinmayi
-
-**Data:**
-```
-Gene Expression Omnibus accession GSE[ACCESSION_NUMBER]
-```
 
 ## Requirements
 
@@ -132,4 +124,8 @@ Default thresholds (modify in `config.R`):
 ## License
 
 MIT License
+
+## Contact
+
+If you have any issues or feedback please contact me at g.v.anoushka@gmail.com.
 
