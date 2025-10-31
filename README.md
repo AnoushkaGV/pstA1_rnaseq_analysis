@@ -23,19 +23,19 @@ install.packages(c("pheatmap", "ggplot2", "tidyr", "dplyr", "ggvenn"))
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/AnoushkaGV/pstA1.git
+git clone https://github.com/AnoushkaGV/pstA1_rnaseq_analysis.git
 cd pstA1
 
 # 2. Create data directory
 mkdir data
 
-# 3. Download data files from GEO (see Data Availability section above)
+# 3. Download data files from GEO (Data will be made available upon resumption of submissions)
 # Place count_matrix.csv and rv_dict.csv in the data/ directory
 ```
 
 ### Required Files from GEO:
 
-Download the following files from GEO and place them in a `data/` directory:
+Download the following files and place them in a `data/` directory:
 
 1. **count_matrix.csv** - Raw count matrix (genes × samples)
    - Format: First column = Gene IDs (Rv numbers), remaining columns = sample counts
